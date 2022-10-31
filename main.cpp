@@ -35,7 +35,7 @@ int main()
  
   
   // and save this new image to file "outImage.pgm"
-  writeImage("testD.pgm",out, h, w);
+  writeImage("testE.pgm",out, h, w);
 
   
   return 0;
