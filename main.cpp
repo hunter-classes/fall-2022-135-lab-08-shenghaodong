@@ -24,7 +24,7 @@ int main()
     }
   }
 
-  for(int row = 0; row < h; row++) {
+  for(int row = h/2; row < h; row++) {
     for(int col = w/2; col < w; col++) {
       out[row][col] = 255 - out[row][col];
     }
@@ -32,7 +32,7 @@ int main()
  
   
   // and save this new image to file "outImage.pgm"
-  writeImage("testB.pgm",out, h, w);
+  writeImage("testC.pgm",out, h, w);
 
   
   return 0;
