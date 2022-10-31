@@ -18,21 +18,24 @@ int main()
   // for example we copy its contents into a new array
   int out[MAX_H][MAX_W];
 
-  for(int row = 0; row < h; row++) {
-    for(int col = 0; col < w; col++) {
+  for(int row = 0; row < h * 2; row++) {
+    for(int col = 0; col < w * 2; col++) {
       out[row][col] = img[row][col];
     }
   }
 
-  for(int row = h/2; row < h; row++) {
-    for(int col = w/2; col < w; col++) {
-      out[row][col] = 255 - out[row][col];
+  for(int row = 0; row < h; row++) {
+    for(int col = 0; col < w; col++) {
+      out[row][col] = 255;
+      // out[row][col] = img[row][col + 1];
+      // out[row + 1][col] = img[row][col];
+      // out[row + 1][col] = img[row][col + 1];
     }
   }
  
   
   // and save this new image to file "outImage.pgm"
-  writeImage("testC.pgm",out, h, w);
+  writeImage("testD.pgm",out, h, w);
 
   
   return 0;
@@ -55,4 +58,24 @@ for(int row = 0; row < h; row++) {
   }
 
 
+*/
+
+/*
+Part C:
+for(int row = h/4; row < (h/4)*3; row++) {
+    for(int col = w/4; col < (w/4)*3; col++) {
+      out[row][col] = 255;
+    }
+  }
+*/
+
+/*
+Part D:
+for(int row = h/4; row < (h/4)*3; row++) {
+    for(int col = w/4; col < (w/4)*3; col++) {
+      if(row == h/4 || row == (h/4)*3 - 1 || col == w/4 || col == (w/4)*3 - 1){
+        out[row][col] = 255;
+      }
+    }
+  }
 */
