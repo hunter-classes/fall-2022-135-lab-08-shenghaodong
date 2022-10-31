@@ -18,24 +18,21 @@ int main()
   // for example we copy its contents into a new array
   int out[MAX_H][MAX_W];
 
-  for(int row = 0; row < h * 2; row++) {
-    for(int col = 0; col < w * 2; col++) {
+  for(int row = 0; row < (h * 2); row++) {
+    for(int col = 0; col < (w * 2); col++) {
       out[row][col] = img[row][col];
     }
   }
 
-  for(int row = 0; row < h; row++) {
-    for(int col = 0; col < w; col++) {
+  for(int row = 0; row < h; row += 2) {
+    for(int col = 0; col < w; col += 2) {
       out[row][col] = 255;
-      // out[row][col] = img[row][col + 1];
-      // out[row + 1][col] = img[row][col];
-      // out[row + 1][col] = img[row][col + 1];
     }
   }
  
   
   // and save this new image to file "outImage.pgm"
-  writeImage("testE.pgm",out, h, w);
+  writeImage("testE.pgm",out, h * 2, w * 2);
 
   
   return 0;
