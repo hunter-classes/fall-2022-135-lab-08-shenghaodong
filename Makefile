@@ -6,7 +6,7 @@ main: main.o funcs.o imageio.o
 
 funcs.o: funcs.cpp funcs.h
 
-main.o: main.cpp funcs.h
+main.o: main.cpp funcs.h imageio.h
 
 imageio.o: imageio.cpp imageio.h
 
