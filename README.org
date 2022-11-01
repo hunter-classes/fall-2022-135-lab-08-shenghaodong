@@ -1,10 +1,10 @@
 * Fall 2022 - Lab 08
 
-* Last name:
+* Last name: Dong
 
-* First name:
+* First name: Shenghao
 
-* GitHub username:
+* GitHub username: shenghaodong
 
 * Notes:
 
